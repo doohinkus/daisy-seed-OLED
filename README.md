@@ -90,5 +90,8 @@ Press both white buttons.
 make program-dfu
 ```
 
+## Why Ox3C?
+![Ox3c](https://github.com/user-attachments/assets/77056401-9ca2-408a-86f6-d83dda7def60)
+
 
 
