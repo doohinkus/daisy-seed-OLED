@@ -25,7 +25,7 @@ cd ./seed/IC2OLED
 using namespace daisy;
 
 /** Typedef the OledDisplay to make syntax cleaner below 
- *  This is a I2C Transport controlling an 128x64 sized SSDD1306
+ *  This is a 2Wire I2C Transport controlling an 128x64 sized SSDD1306
  * 
  *  There are several other premade test 
 */
@@ -63,20 +63,21 @@ int main(void)
         System::Delay(500);
         switch(message_idx)
         {
-            case 0: sprintf(strbuff, "Testing. . ."); break;
-            case 1: sprintf(strbuff, "Daisy. . ."); break;
-            case 2: sprintf(strbuff, "1. . ."); break;
-            case 3: sprintf(strbuff, "2. . ."); break;
-            case 4: sprintf(strbuff, "3. . ."); break;
+            case 0: sprintf(strbuff, " Testing. . ."); break;
+            case 1: sprintf(strbuff, " Daisy. . ."); break;
+            case 2: sprintf(strbuff, " 1. . ."); break;
+            case 3: sprintf(strbuff, " 2. . ."); break;
+            case 4: sprintf(strbuff, " 3. . ."); break;
             default: break;
         }
         message_idx = (message_idx + 1) % 5;
-        display.Fill(true);
+        // display.Fill(true);
         display.SetCursor(0, 0);
-        display.WriteString(strbuff, Font_11x18, false);
+        display.WriteString(strbuff, Font_7x10, true);
         display.Update();
     }
 }
+
 ```
 
 ### Compile
