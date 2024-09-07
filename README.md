@@ -92,6 +92,14 @@ Press both white buttons.
 make program-dfu
 ```
 
+## Why DSY_GPIOB, 8 and DSY_GPIOB, 9?
+```c++
+display_config.driver_config.transport_config.i2c_config.pin_config.scl = {DSY_GPIOB, 8};
+display_config.driver_config.transport_config.i2c_config.pin_config.sda = {DSY_GPIOB, 9};
+```
+<img width="869" alt="Screenshot 2024-09-07 at 9 59 41 AM" src="https://github.com/user-attachments/assets/8fef8f91-4eb5-40a1-aaa0-cfe5f052af96">
+
+
 ## Why Ox3C?
 ![Ox3c](https://github.com/user-attachments/assets/77056401-9ca2-408a-86f6-d83dda7def60)
 
