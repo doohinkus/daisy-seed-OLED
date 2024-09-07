@@ -45,25 +45,22 @@ int main(void)
     MyOledDisplay::Config display_config;
 
     display_config.driver_config.transport_config.i2c_address = 0x3C;
-	display_config.driver_config.transport_config.i2c_config.periph = I2CHandle::Config::Peripheral::I2C_1;
-	display_config.driver_config.transport_config.i2c_config.speed  = I2CHandle::Config::Speed::I2C_100KHZ;
-	display_config.driver_config.transport_config.i2c_config.mode = I2CHandle::Config::Mode::I2C_MASTER;
- 	display_config.driver_config.transport_config.i2c_config.pin_config.scl = {DSY_GPIOB, 8};
-	display_config.driver_config.transport_config.i2c_config.pin_config.sda = {DSY_GPIOB, 9};
+    display_config.driver_config.transport_config.i2c_config.periph = I2CHandle::Config::Peripheral::I2C_1;
+    display_config.driver_config.transport_config.i2c_config.speed  = I2CHandle::Config::Speed::I2C_100KHZ;
+    display_config.driver_config.transport_config.i2c_config.mode = I2CHandle::Config::Mode::I2C_MASTER;
+    display_config.driver_config.transport_config.i2c_config.pin_config.scl = {DSY_GPIOB, 8};
+    display_config.driver_config.transport_config.i2c_config.pin_config.sda = {DSY_GPIOB, 9};
 
-	display.Init(display_config);
+    display.Init(display_config);
     
-     
     /** And Initialize */
     display.Init(display_config);
 
     message_idx = 0;
     char strbuff[128];
-    while(1)
-    {
+    while(1){
         System::Delay(500);
-        switch(message_idx)
-        {
+        switch(message_idx){
             case 0: sprintf(strbuff, " Testing. . ."); break;
             case 1: sprintf(strbuff, " Daisy. . ."); break;
             case 2: sprintf(strbuff, " 1. . ."); break;
@@ -72,7 +69,7 @@ int main(void)
             default: break;
         }
         message_idx = (message_idx + 1) % 5;
-        // display.Fill(true);
+
         display.SetCursor(0, 0);
         display.WriteString(strbuff, Font_7x10, true);
         display.Update();
