@@ -1,4 +1,4 @@
-# Daisy Seed OLED 1306 I2C/ 2 Wire (gnd, vcc, sdc, slc)
+# Daisy Seed OLED 1306 I2C/ 2 Wire (gnd, vcc, slc, sda)
 Example of using OLED with Electrosmith Daisy Seed music microcontroller.
 ![daisy_seed_i2c_oled](https://github.com/user-attachments/assets/a9d47c44-4a7c-4567-ba47-9f42db11e14a)
 
