@@ -3,7 +3,7 @@ Example of using OLED with Electrosmith Daisy Seed music microcontroller.
 ![daisy_seed_i2c_oled](https://github.com/user-attachments/assets/a9d47c44-4a7c-4567-ba47-9f42db11e14a)
 
 ### Wiring
-In dev...
+![DaisySeed_OLED_FOUR_PIN](https://github.com/user-attachments/assets/50253b5d-d730-4749-90af-9e4bcf32b194)
 
 ### Fork / Clone ( https://github.com/electro-smith/DaisyExamples/tree/master )
 ### Copy OLED example
